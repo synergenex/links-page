@@ -2,3 +2,4 @@
 /_support/
 /.jekyll-metadata
 /.jekyll-cache/
+.envrc
