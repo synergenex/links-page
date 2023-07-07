@@ -1,0 +1,16 @@
+lang_name: Русский
+title: Synergenex – Ссылки
+extra_html: |-
+  Все актуальные ссылки на ресурсы Synergenex® в одном месте: <i class="fas fa-globe fa-fw"></i>&nbsp;сайт, <i class="fas fa-envelope fa-fw"></i>&nbsp;почта и темы на специализированных форумах.
+no_translation:
+  Извините, но эта страница недоступна на этом языке.
+go_to_thread:
+  Перейти в ветку форума
+
+links:
+  - web:
+      name: Актуальное зеркало
+  - instagram: 
+      name: Instagram
+  - email: 
+      name: Эл. почта

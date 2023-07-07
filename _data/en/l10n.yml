@@ -1,0 +1,16 @@
+lang_name: English
+title: Synergenex Links
+extra_html: |
+  All relevant links to Synergenex® resources in one place: <i class="fas fa-globe fa-fw"></i>&nbsp;website, <i class="fas fa-envelope fa-fw"></i>&nbsp;email and topics on specialized forums.
+no_translation:
+  Sorry, this page is not available in this language.
+go_to_thread:
+  Go to Forum Thread
+
+links:
+  - web: 
+      name: Latest mirror
+  - instagram: 
+      name: Instagram
+  - email: 
+      name: Email

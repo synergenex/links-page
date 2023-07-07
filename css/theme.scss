@@ -2,6 +2,10 @@
 # ========= Fuse Core Jekyll Theme ============================================================== #
 ---
 
+:root {
+    --bs-body-bg: #232323;
+}
+
 $fc-footer-height: 44px;
 
 html, body {
@@ -16,20 +20,30 @@ body {
 }
 
 .fullscreen-background {
-    background: url("../images/background.jpg") no-repeat center center fixed; 
+    background: url("../images/background.png"), url("../images/sport-bg-smoke.png")  no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: var(--bs-body-bg);
 }
-
-div.glass-pane {
-    background-color: rgba(0, 0, 0, 0.5);
+.secondary-background {
+    //background: url("../images/bodybuilder.png") no-repeat bottom center/60vh fixed;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    min-height: 42vh;  /* always cover at least the sky */
+    height: 100%;
 }
 
-div.fuse-core-content {
+.glass-pane {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    backdrop-filter: blur(20px) saturate(1.2);
+    width: 100%;
+    //min-height: 42vh;  /* always cover at least the sky */
+}
+
+.fuse-core-content {
     color: white;
 }
 
@@ -37,9 +51,14 @@ div.fuse-core-content {
 /* --------- Avatar ---------------------------------------------------------------------------- */
 
 #avatar {
-    height: 180px;
-    border-radius: 100%;
-    border: 5px solid white;
+    height: 100px;
+    width: 100%;
+    //border: 5px solid #650000;
+    @media (max-width: 575.98px) {  /* used on bootstrap size 'xs' */
+        height: 180px;
+        width: auto;
+        border-radius: 100%;
+    }
 }
 
 
@@ -72,13 +91,13 @@ div.row.links {
         font-size: 1.8em;
         line-height: 1em;
         overflow: hidden;
+        text-decoration: none;
         @media (max-width: 575.98px) {  /* used on bootstrap size 'xs' */
             border-radius: 10px;
             width: 100%;
         }
 
         &:hover {
-            text-decoration: none;
             -webkit-transition: 300ms;
             -moz-transition: 300ms;
             transition: 300ms;
@@ -105,15 +124,32 @@ div.row.links {
         color: rgba(255, 255, 255, 0.9);
         border-radius: 3px;
         padding: 0 2px;
+        text-decoration: none;
 
         &:hover {
             color: white;
             text-decoration: none;
-            background-color: rgba(0, 0, 0, 0.6);
+            //background-color: rgba(0, 0, 0, 0.6);
         }
     }
 }
 
+.forums {
+    .logo {
+        max-width: 200px;
+        @media (max-width: 767.98px) {  /* used on bootstrap size 'xs' */
+            letter-spacing: 0;
+            width: 100%;
+        }
+    }
+
+    .forum {
+        border: 2px white solid;
+        border-radius: 10px;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+}
 
 /* --------- Footer ---------------------------------------------------------------------------- */
 

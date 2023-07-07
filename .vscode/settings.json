@@ -3,7 +3,7 @@
     "editor.wordWrapColumn": 120,
     "editor.autoClosingBrackets": "never",
     "editor.codeLens": false,
-    "editor.dragAndDrop": false,
+    "editor.dragAndDrop": true,
     "editor.formatOnSave": false,
     "files.exclude": {
         "**/.git": true,
