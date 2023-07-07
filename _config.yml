@@ -88,7 +88,7 @@ links:
   - web:
       name: Latest mirror
       show: true
-      href: https://synergenex.com
+      href: https://a.synergenex.com
       icon: fas fa-globe
   - facebook:
       name: Facebook
