@@ -206,31 +206,28 @@ permalink: /
     {% if site.forums_enabled %}
     <div class="forums container fuse-core-extra">
       {% for hash in site.forums %} {% for linkInfo in hash %}
+      {% if linkInfo[1].href %}
+      <a href="{{ linkInfo[1].href }}">
+      {% endif %}
       <div class="row align-items-center forum">
-        <div class="col-4">
-          {% if linkInfo[1].href %}
-          <a href="{{ linkInfo[1].href }}">
-            {% endif %}
+        <div class="col-4 logo-container">
             <img
               class="position-relative logo start-50 top-50 translate-middle-x"
               alt="{{ linkInfo[0] }} logo"
               src="{{ site.baseurl }}/{{ linkInfo[1].icon }}"
             />
-            {% if linkInfo[1].href %}
-          </a>
-          {% endif %}
         </div>
-        <div class="col">
+        <div class="col py-2">
           <h3>{{ linkInfo[1].name }}</h3>
           <p>
-            {% if linkInfo[1].href %}<a href="{{ linkInfo[1].href }}"
-              >{% endif %} {{ site.data.l10n.go_to_thread }}
-              <i class="fas fa-arrow-right fa-fw"></i> {% if linkInfo[1].href
-              %}</a
-            >{% endif %}
+              {{ site.data.l10n.go_to_thread }}
+              <i class="fas fa-arrow-right fa-fw"></i> 
           </p>
         </div>
       </div>
+      {% if linkInfo[1].href %}
+      </a>
+      {% endif %}
       {% endfor %} {% endfor %}
     </div>
     {% endif %} {%- include footer.html -%}
