@@ -1,5 +1,7 @@
 lang_name: Русский
 title: Synergenex – Ссылки
+robots:
+  description: Synergenex — канадский поставщик продуктов, повышающих спортивные результаты. Продукты, новости, проверка подлинности, контакты.
 extra_html: |-
   Все актуальные ссылки на ресурсы Synergenex® в одном месте: <i class="fas fa-globe fa-fw"></i>&nbsp;сайт, <i class="fas fa-envelope fa-fw"></i>&nbsp;почта и темы на специализированных форумах.
 no_translation:

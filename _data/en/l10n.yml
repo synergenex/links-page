@@ -1,5 +1,7 @@
 lang_name: English
 title: Synergenex Links
+robots:
+  description: Synergenex – Canadian provider of products enhancing sport results. Products, news, authenticity check, contacts.
 extra_html: |
   All relevant links to Synergenex® resources in one place: <i class="fas fa-globe fa-fw"></i>&nbsp;website, <i class="fas fa-envelope fa-fw"></i>&nbsp;email and topics on specialized forums.
 no_translation:

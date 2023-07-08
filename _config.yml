@@ -43,7 +43,6 @@ meta_theme_color: |
 # 'description' and 'keywords' simply set the corresponding meta tags,
 # 'crawl' is the 'Robots' tag http://www.robotstxt.org/meta.html
 robots:
-  description: Synergenex – Canadian provider of products enhancing sport results. Products, news, authenticity check, contacts.
   keywords: Synergenex, links, media, mirror
   crawl: index,follow
 

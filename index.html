@@ -11,7 +11,7 @@ permalink: /
       {% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}
     </title>
     {% if site.robots.description %}
-    <meta name="Description" content="{{ site.robots.description }}" />
+    <meta name="Description" content="{{ site.data.l10n.robots.description }}" />
     {% endif %} {% if site.robots.keywords %}
     <meta name="Keywords" content="{{ site.robots.keywords }}" />
     {% endif %} {% if site.robots.crawl %}
