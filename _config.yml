@@ -89,6 +89,11 @@ links:
       show: true
       href: https://a.synergenex.com
       icon: fas fa-globe
+  - telegram:
+      name: Telegram channel
+      show: true
+      href: https://t.me/synergenex
+      icon: fab fa-telegram-plane
   - facebook:
       name: Facebook
       show: false

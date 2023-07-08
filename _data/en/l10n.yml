@@ -12,6 +12,8 @@ go_to_thread:
 links:
   - web: 
       name: Latest mirror
+  - telegram: 
+      name: Telegram
   - instagram: 
       name: Instagram
   - email: 

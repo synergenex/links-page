@@ -12,6 +12,8 @@ go_to_thread:
 links:
   - web:
       name: Актуальное зеркало
+  - telegram:
+      name: Телеграм-чат
   - instagram: 
       name: Instagram
   - email: 
