@@ -8,10 +8,14 @@ permalink: /
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      {% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}
+      {% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{
+      site.name }}{% endif %}
     </title>
-    {% if site.robots.description %}
-    <meta name="Description" content="{{ site.data.l10n.robots.description }}" />
+    {% if site.data.l10n.robots.description %}
+    <meta
+      name="Description"
+      content="{{ site.data.l10n.robots.description }}"
+    />
     {% endif %} {% if site.robots.keywords %}
     <meta name="Keywords" content="{{ site.robots.keywords }}" />
     {% endif %} {% if site.robots.crawl %}
@@ -54,8 +58,14 @@ permalink: /
       rel="shortcut icon"
       href="{{ site.baseurl }}/images/favicons/favicon.ico"
     />
-    <meta name="apple-mobile-web-app-title" content="{% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}">
-    <meta name="application-name" content="{% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}">
+    <meta
+      name="apple-mobile-web-app-title"
+      content="{% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}"
+    />
+    <meta
+      name="application-name"
+      content="{% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}"
+    />
     <meta name="msapplication-TileColor" content="#db242b" />
     <meta
       name="msapplication-config"
@@ -126,7 +136,9 @@ permalink: /
       <div class="container fuse-core-content pb-4">
         <div class="row pt-sm-4">
           <div class="col text-center">
-            {% if site.avatar_link_enabled == true %}<a href="{{ site.links[0].web.href }}">{% endif %}
+            {% if site.avatar_link_enabled == true %}<a
+              href="{{ site.links[0].web.href }}"
+              >{% endif %}
               <img
                 id="avatar"
                 class="my-3 my-sm-4 d-sm-none"
@@ -141,7 +153,8 @@ permalink: /
                 alt="{{ site.name }}"
                 src="{% if site.avatar %}{{ site.baseurl }}/images/logo_rectangular.svg{% endif %}"
               />
-              {% if site.avatar_link_enabled == true %}</a>{% endif %}
+              {% if site.avatar_link_enabled == true %}</a
+            >{% endif %}
           </div>
         </div>
         <div class="row">
@@ -154,32 +167,31 @@ permalink: /
         </div>
 
         <div class="row justify-content-center links pt-1 pt-sm-2">
-          {% for hash in site.links %}
-            {% for linkInfo in hash %}
-              {% assign linkName = linkInfo[0] %}
-              {% if linkInfo[1].show %}
-                {% assign linkName = linkInfo[0] %}
-                {% for locLinkInfo in site.data.l10n.links %}
-                  {% if locLinkInfo[linkName] %}
-                    {% assign locLinkName = locLinkInfo[linkName].name %}
-                  {% endif %}
-                {% endfor %}
-                <div class="col-xs-12 col-sm-2 col-lg-1 px-3 px-sm-0 mt-2 mt-sm-3 text-sm-center">
-                  <a
-                    href="{{ linkInfo[1].href }}"
-                    {% if site.ga %}
-                      onclick="trackOutboundLink('{{ locLinkName }}', '{{ linkInfo[1].href }}'); return false;"
-                    {% endif %}
-                  >
-                    <i class="{{ linkInfo[1].icon }} fa-fw"></i>
-                    <span class="d-inline d-sm-none">{{ locLinkName }}</span>
-                  </a>
-                </div>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
+          {% for hash in site.links %} {% for linkInfo in hash %} {% assign
+          linkName = linkInfo[0] %} {% if linkInfo[1].show %} {% assign linkName
+          = linkInfo[0] %} {% for locLinkInfo in site.data.l10n.links %} {% if
+          locLinkInfo[linkName] %} {% assign locLinkName =
+          locLinkInfo[linkName].name %} {% endif %} {% endfor %}
+          <div
+            class="col-xs-12 col-sm-2 col-lg-1 px-3 px-sm-0 mt-2 mt-sm-3 text-sm-center"
+          >
+            <a
+              href="{{ linkInfo[1].href }}"
+              {%
+              if
+              site.ga
+              %}
+              onclick="trackOutboundLink('{{ locLinkName }}', '{{ linkInfo[1].href }}'); return false;"
+              {%
+              endif
+              %}
+            >
+              <i class="{{ linkInfo[1].icon }} fa-fw"></i>
+              <span class="d-inline d-sm-none">{{ locLinkName }}</span>
+            </a>
+          </div>
+          {% endif %} {% endfor %} {% endfor %}
         </div>
-
 
         {% if site.data.l10n.extra_html %}
         <div class="row justify-content-center">
@@ -190,36 +202,37 @@ permalink: /
         {% endif %}
       </div>
     </div>
-    
+
     {% if site.forums_enabled %}
-      <div class="forums container fuse-core-extra">
-        {% for hash in site.forums %}
-          {% for linkInfo in hash %}
-            <div class="row align-items-center forum">
-              <div class="col-4 ">
-                  {% if linkInfo[1].href %}
-                    <a href="{{ linkInfo[1].href }}">
-                  {% endif %}
-                  <img class="position-relative logo start-50 top-50 translate-middle-x" alt="{{ linkInfo[0] }} logo" src="{{ site.baseurl }}/{{ linkInfo[1].icon }}"/>
-                  {% if linkInfo[1].href %}
-                    </a>
-                  {% endif %}
-              </div>
-              <div class="col">
-                <h3>{{ linkInfo[1].name }}</h3>
-                <p>
-                  {% if linkInfo[1].href %}<a href="{{ linkInfo[1].href }}">{% endif %}
-                    {{ site.data.l10n.go_to_thread }} <i class="fas fa-arrow-right fa-fw"></i></a>
-                  {% if linkInfo[1].href %}</a>{% endif %}
-                </p>
-              </div>
-            </div>
-          {% endfor %}
-
-        {% endfor %}
+    <div class="forums container fuse-core-extra">
+      {% for hash in site.forums %} {% for linkInfo in hash %}
+      <div class="row align-items-center forum">
+        <div class="col-4">
+          {% if linkInfo[1].href %}
+          <a href="{{ linkInfo[1].href }}">
+            {% endif %}
+            <img
+              class="position-relative logo start-50 top-50 translate-middle-x"
+              alt="{{ linkInfo[0] }} logo"
+              src="{{ site.baseurl }}/{{ linkInfo[1].icon }}"
+            />
+            {% if linkInfo[1].href %}
+          </a>
+          {% endif %}
+        </div>
+        <div class="col">
+          <h3>{{ linkInfo[1].name }}</h3>
+          <p>
+            {% if linkInfo[1].href %}<a href="{{ linkInfo[1].href }}"
+              >{% endif %} {{ site.data.l10n.go_to_thread }}
+              <i class="fas fa-arrow-right fa-fw"></i> {% if linkInfo[1].href
+              %}</a
+            >{% endif %}
+          </p>
+        </div>
       </div>
-    {% endif %}
-
-    {%- include footer.html -%}
+      {% endfor %} {% endfor %}
+    </div>
+    {% endif %} {%- include footer.html -%}
   </body>
 </html>
