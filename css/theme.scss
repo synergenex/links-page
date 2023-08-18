@@ -59,6 +59,12 @@ body {
         width: auto;
         border-radius: 100%;
     }
+
+    transition: all .5s cubic-bezier(0.15, 0, 0, 1.0);
+    &:hover {
+        transform: translateY(-3px) scale(1.015);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+    }
 }
 
 
@@ -158,10 +164,10 @@ div.row.links {
             }
         }
 
-        transition: all 0.2s ease-out;
+        transition: all .5s cubic-bezier(0.15, 0, 0, 1.0);
         &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px black;
+            transform: translateY(-3px) scale(1.015);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
         }
     }
 }
