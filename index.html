@@ -8,127 +8,109 @@ permalink: /
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      {% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{
-      site.name }}{% endif %}
+      {% if site.data.l10n.title %}
+        {{ site.data.l10n.title }}
+      {% else %}
+        {{
+           site.name }}{% endif %}
     </title>
     {% if site.data.l10n.robots.description %}
-    <meta
-      name="Description"
-      content="{{ site.data.l10n.robots.description }}"
-    />
-    {% endif %} {% if site.robots.keywords %}
-    <meta name="Keywords" content="{{ site.robots.keywords }}" />
-    {% endif %} {% if site.robots.crawl %}
-    <meta name="Robots" content="{{ site.robots.crawl }}" />
+      <meta name="Description" content="{{ site.data.l10n.robots.description }}" />
+    {% endif %}
+    {% if site.robots.keywords %}
+      <meta name="Keywords" content="{{ site.robots.keywords }}" />
+    {% endif %}
+    {% if site.robots.crawl %}
+      <meta name="Robots" content="{{ site.robots.crawl }}" />
     {% endif %}
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% if site.url %}
-    <link rel="canonical" href="{{ site.url }}" />
-    {% endif %} {% include analytics.html %}
+      <link rel="canonical" href="{{ site.url }}" />
+    {% endif %}
+    {% include analytics.html %}
 
     <!-- favicons -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="{{ site.baseurl }}/images/favicons/apple-touch-icon.png"
-    />
+      href="{{ site.baseurl }}/images/favicons/apple-touch-icon.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="{{ site.baseurl }}/images/favicons/favicon-32x32.png"
-    />
+      href="{{ site.baseurl }}/images/favicons/favicon-32x32.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="{{ site.baseurl }}/images/favicons/favicon-16x16.png"
-    />
-    <link
-      rel="manifest"
-      href="{{ site.baseurl }}/images/favicons/site.webmanifest"
-    />
+      href="{{ site.baseurl }}/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="{{ site.baseurl }}/images/favicons/site.webmanifest" />
     <link
       rel="mask-icon"
       href="{{ site.baseurl }}/images/favicons/safari-pinned-tab.svg"
-      color="{{ site.meta_theme_color }}"
-    />
-    <link
-      rel="shortcut icon"
-      href="{{ site.baseurl }}/images/favicons/favicon.ico"
-    />
-    <meta
-      name="apple-mobile-web-app-title"
-      content="{% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}"
-    />
-    <meta
-      name="application-name"
-      content="{% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}"
-    />
+      color="{{ site.meta_theme_color }}" />
+    <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicons/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="{% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}" />
+    <meta name="application-name" content="{% if site.data.l10n.title %}{{ site.data.l10n.title }}{% else %}{{ site.name }}{% endif %}" />
     <meta name="msapplication-TileColor" content="#db242b" />
-    <meta
-      name="msapplication-config"
-      content="{{ site.baseurl }}/images/favicons/browserconfig.xml"
-    />
+    <meta name="msapplication-config" content="{{ site.baseurl }}/images/favicons/browserconfig.xml" />
     <meta name="theme-color" content="{{ site.meta_theme_color }}" />
 
     <!-- Stylesheets -->
-    {%- comment -%} Bootstrap should be the first stylesheet {%- endcomment %}
-    <link
+    {%- comment -%} Bootstrap should be the first stylesheet {%- endcomment %} <link
       rel="stylesheet"
       type="text/css"
       crossorigin="anonymous"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-    />
-    <link
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" /> <link
       rel="stylesheet"
       type="text/css"
-      href="{{ site.baseurl }}/css/theme.css{% if site.version %}?ver={{ site.version }}{% endif %}"
-    />
+      href="{{ site.baseurl }}/css/theme.css{% if site.version %}?ver={{ site.version }}{% endif %}" />
     <link
       rel="stylesheet"
       type="text/css"
       crossorigin="anonymous"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-    />
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-    />
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" />
 
     {% if site.ga and site.ga.cookieconsent -%}
-    <!-- Cookie Consent popup to comply with EU cookie law -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      crossorigin="anonymous"
-      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
-      integrity="sha384-nA7usz4cMKo7RylsCZnpe0V9qx5X7sa011o0OrDzrKUE7Ero1gB48Fjaw6SFxVZe"
-    />
-    <script
-      async
-      crossorigin="anonymous"
-      data-cfasync="false"
-      src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
-      integrity="sha384-xLPjH6nqG4p/2mu1KJ1t+4KqcvkyXVwBucQtyGK65lDNfKzECxGY/QEYWR+Wompr"
-    ></script>
-    <script>
-      window.addEventListener("load", function () {
-        window.cookieconsent.initialise({
-          cookie: { expiryDays: 730 },
-          palette: {
-            popup: { background: "#383b75" },
-            button: { background: "#f1d600" },
-          },
-          theme: "classic",
+      <!-- Cookie Consent popup to comply with EU cookie law -->
+      <link
+        rel="stylesheet"
+        type="text/css"
+        crossorigin="anonymous"
+        href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+        integrity="sha384-nA7usz4cMKo7RylsCZnpe0V9qx5X7sa011o0OrDzrKUE7Ero1gB48Fjaw6SFxVZe" />
+      <script
+        async
+        crossorigin="anonymous"
+        data-cfasync="false"
+        src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
+        integrity="sha384-xLPjH6nqG4p/2mu1KJ1t+4KqcvkyXVwBucQtyGK65lDNfKzECxGY/QEYWR+Wompr"></script>
+      <script>
+        window.addEventListener("load", function() {
+          window.cookieconsent.initialise({
+            cookie: {
+              expiryDays: 730
+            },
+            palette: {
+              popup: {
+                background: "#383b75"
+              },
+              button: {
+                background: "#f1d600"
+              }
+            },
+            theme: "classic"
+          });
         });
-      });
-    </script>
+      </script>
     {%- endif %}
   </head>
   <body class="fullscreen-background">
@@ -136,69 +118,77 @@ permalink: /
       <div class="container fuse-core-content pb-4">
         <div class="row pt-sm-4">
           <div class="col text-center">
-            {% if site.avatar_link_enabled == true %}<a
-              href="{{ site.links[0].web.href }}"
-              >{% endif %}
+            {% if site.avatar_link_enabled == true %}
+              <a href="{{ site.links[0].web.href }}">
+              {% endif %}
               <img
                 id="avatar"
                 class="my-3 my-sm-4 d-sm-none"
                 alt="{{ site.name }}"
-                src="{% if site.avatar %}{% if site.avatar contains '://' %}{{ site.avatar }}{%
-          else %}{{ site.baseurl }}/{{ site.avatar }}{% endif %}{%
-          else %}{{ site.baseurl }}/images/avatar.svg{% endif %}"
-              />
+                src='{% if site.avatar %}
+                {% if site.avatar contains '://' %}
+                  {{ site.avatar }}
+                {% 
+ else %}
+                  {{ site.baseurl }}/{{ site.avatar }}{% endif %}
+              {% 
+ else %}
+                {{ site.baseurl }}/images/avatar.svg{% endif %}'>
               <img
                 id="avatar"
                 class="my-3 my-sm-4 d-block d-none d-sm-block"
                 alt="{{ site.name }}"
-                src="{% if site.avatar %}{{ site.baseurl }}/images/logo_rectangular.svg{% endif %}"
-              />
-              {% if site.avatar_link_enabled == true %}</a
-            >{% endif %}
+                src="{% if site.avatar %}{{ site.baseurl }}/images/logo_rectangular.svg{% endif %}" />
+              {% if site.avatar_link_enabled == true %}
+              </a>
+            {% endif %}
           </div>
         </div>
         <div class="row">
           <div class="col">
             <h1 class="text-center fw-bold">{{ site.name }}</h1>
             {% if site.subtitle %}
-            <h3 class="text-center fw-light">{{ site.subtitle }}</h3>
+              <h3 class="text-center fw-light">{{ site.subtitle }}</h3>
             {% endif %}
           </div>
         </div>
 
         <div class="row justify-content-center links pt-1 pt-sm-2">
-          {% for hash in site.links %} {% for linkInfo in hash %} {% assign
-          linkName = linkInfo[0] %} {% if linkInfo[1].show %} {% assign linkName
-          = linkInfo[0] %} {% for locLinkInfo in site.data.l10n.links %} {% if
-          locLinkInfo[linkName] %} {% assign locLinkName =
-          locLinkInfo[linkName].name %} {% endif %} {% endfor %}
-          <div
-            class="col-xs-12 col-sm-2 col-lg-1 px-3 px-sm-0 mt-2 mt-sm-3 text-sm-center"
-          >
-            <a
-              href="{{ linkInfo[1].href }}"
-              {%
-              if
-              site.ga
-              %}
-              onclick="trackOutboundLink('{{ locLinkName }}', '{{ linkInfo[1].href }}'); return false;"
-              {%
-              endif
-              %}
-            >
-              <i class="{{ linkInfo[1].icon }} fa-fw"></i>
-              <span class="d-inline d-sm-none">{{ locLinkName }}</span>
-            </a>
-          </div>
-          {% endif %} {% endfor %} {% endfor %}
+          {% for hash in site.links %}
+            {% for linkInfo in hash %}
+              {% assign
+               linkName = linkInfo[0] %}
+              {% if linkInfo[1].show %}
+                {% assign linkName
+                 = linkInfo[0] %}
+                {% for locLinkInfo in site.data.l10n.links %}
+                  {% if
+ locLinkInfo[linkName] %}
+                    {% assign locLinkName = 
+                     locLinkInfo[linkName].name %}
+                  {% endif %}
+                {% endfor %}
+                <div class="col-xs-12 col-sm-2 col-lg-1 px-3 px-sm-0 mt-2 mt-sm-3 text-sm-center">
+                  <a
+                    href="{{ linkInfo[1].href }}"
+                    {% if site.ga %}
+                    onclick="trackOutboundLink('{{ locLinkName }}', '{{ linkInfo[1].href }}'); return false;"
+                    {% endif %}>
+                    <i class="{{ linkInfo[1].icon }} fa-fw"></i>
+                    <span class="d-inline d-sm-none">{{ locLinkName }}</span>
+                  </a>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
         </div>
 
         {% if site.data.l10n.extra_html %}
-        <div class="row justify-content-center">
-          <div class="col mt-3 text-sm-center fuse-core-extra">
-            {{ site.data.l10n.extra_html }}
+          <div class="row justify-content-center">
+            <div class="col mt-3 text-sm-center fuse-core-extra">
+              {{ site.data.l10n.extra_html }}
+            </div>
           </div>
-        </div>
         {% endif %}
       </div>
     </div>
