@@ -101,6 +101,9 @@ div.row.links {
         border-color: lighten(vars.$theme_color, 40%);
         transition: all .5s cubic-bezier(0.15, 0, 0, 1.0);
         animation: pulse 2s ease-in-out infinite;
+        @media (max-width: 767.98px) {  /* used on bootstrap size 'xs' */
+            animation: pulse_mobile 2s ease-in-out infinite;
+        }
         &:hover {
             transform: translateY(-3px) scale(1.015);
             box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
