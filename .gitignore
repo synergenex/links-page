@@ -2,4 +2,5 @@
 /_support/
 /.jekyll-metadata
 /.jekyll-cache/
+/vendor
 .envrc
