@@ -37,8 +37,9 @@ langsep: "•"
 # Title attribute of HTML Page, uses 'name' from above if empty
 title: Synergenex Links
 
-meta_theme_color: |
-  #db242b
+# Theme color for mobile browsers, see https://developers.google.com/web/fundamentals/design-and-ui/browser-customization/
+# Includes Safari pinned tab color on macOS, Chrome toolbar color, etc.
+meta_theme_color: #db242b
 
 # Information for web crawlers / Google, all of them optional
 # 'description' and 'keywords' simply set the corresponding meta tags,
