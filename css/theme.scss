@@ -2,6 +2,11 @@
 # ========= Fuse Core Jekyll Theme ============================================================== #
 ---
 
+@use "sass:color";
+
+@use "vars";
+@use "animations";
+
 :root {
     --bs-body-bg: #232323;
 }
@@ -89,6 +94,23 @@ div.row.links {
         white-space: nowrap;
         padding: 0;
     }
+
+    > div:first-child a {
+        background-color: transparentize(vars.$theme_color, 0.8);
+        color: lighten(vars.$theme_color, 40%);
+        border-color: lighten(vars.$theme_color, 40%);
+        transition: all .5s cubic-bezier(0.15, 0, 0, 1.0);
+        animation: pulse 2s ease-in-out infinite;
+        &:hover {
+            transform: translateY(-3px) scale(1.015);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+            color: white;
+            border-color: white;
+            background-color: vars.$theme_color;
+            animation: none;
+        }
+    }
+
     a {
         color: white;
         border-radius: 100%;
@@ -98,6 +120,7 @@ div.row.links {
         line-height: 1em;
         overflow: hidden;
         text-decoration: none;
+        transition: all .5s cubic-bezier(0.15, 0, 0, 1.0);
         @media (max-width: 575.98px) {  /* used on bootstrap size 'xs' */
             border-radius: 10px;
             width: 100%;
@@ -109,6 +132,8 @@ div.row.links {
             -moz-transition: 300ms;
             transition: 300ms;
             background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(-3px) scale(1.015);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
         }
 
         > i {

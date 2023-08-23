@@ -1,0 +1,20 @@
+@use "vars";
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: transparentize(vars.$theme_color, 1);;
+    border-color: lighten(vars.$theme_color, 45%);
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: transparentize(vars.$theme_color, 0.8);
+    //color: lighten(vars.$theme_color, 40%);
+    //border-color: lighten(vars.$theme_color, 40%);
+  }
+  100% {
+    transform: scale(1);
+    background-color: transparentize(vars.$theme_color, 1);
+    border-color: lighten(vars.$theme_color, 45%);
+  }
+}

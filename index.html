@@ -67,6 +67,11 @@ permalink: /
       rel="stylesheet"
       type="text/css"
       href="{{ site.baseurl }}/css/theme.css{% if site.version %}?ver={{ site.version }}{% endif %}" />
+    <style>
+      :root {
+        --theme-color: {{ site.meta_theme_color }};
+      }
+    </style>
     <link
       rel="stylesheet"
       type="text/css"
