@@ -4,7 +4,7 @@
 plugins:
   - jekyll-polyglot
 
-version: 0.2.3
+version: 0.2.4
 markdown: kramdown
 permalink: pretty
 exclude: ["README.*", "LICENSE.txt"]
@@ -126,7 +126,7 @@ forums_enabled: true
 forums:
   - anabolicshops:
       name: AnabolicShops
-      href: https://bu.anabolicshops.me/threads/12126/page-999999999
+      href: https://bv.anabolicshops.me/threads/12126/page-999999999
       icon: images/forums/anabolicshops.png
   - do4a:
       name: Do4a
