@@ -4,7 +4,7 @@
 plugins:
   - jekyll-polyglot
 
-version: 0.2.6
+version: 0.2.7
 markdown: kramdown
 permalink: pretty
 exclude: ["README.*", "LICENSE.txt"]
@@ -130,5 +130,5 @@ forums:
       icon: images/forums/anabolicshops.png
   - do4a:
       name: Do4a
-      href: https://bb.do4a.me/threads/synergenex-—-откройте-нового-себя.35185/page-999999999
+      href: https://bc.do4a.me/threads/synergenex-—-откройте-нового-себя.35185/page-999999999
       icon: images/forums/do4a.png
