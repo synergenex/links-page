@@ -89,7 +89,7 @@ links:
   - web:
       name: Latest mirror
       show: true
-      href: https://a.synergenex.com
+      href: https://b.synergenex.com
       icon: fas fa-globe
   - telegram:
       name: Telegram channel
