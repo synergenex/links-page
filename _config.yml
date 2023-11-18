@@ -94,7 +94,7 @@ links:
   - telegram:
       name: Telegram channel
       show: true
-      href: https://t.me/synergenex
+      href: tg://resolve?domain=synergenex
       icon: fab fa-telegram-plane
   - facebook:
       name: Facebook
