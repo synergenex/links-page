@@ -126,9 +126,9 @@ forums_enabled: true
 forums:
   - anabolicshops:
       name: AnabolicShops
-      href: https://ce.anabolicshops.me/threads/12126/page-999999999
+      href: https://cf.anabolicshops.me/threads/12126/page-999999999
       icon: images/forums/anabolicshops.png
   - do4a:
       name: Do4a
-      href: https://be.do4a.me/threads/synergenex-—-откройте-нового-себя.35185/page-999999999
+      href: https://bf.do4a.me/threads/synergenex-—-откройте-нового-себя.35185/page-999999999
       icon: images/forums/do4a.png
