@@ -89,7 +89,7 @@ links:
   - web:
       name: Latest mirror
       show: true
-      href: https://b.synergenex.com
+      href: https://c.synergenex.com
       icon: fas fa-globe
   - telegram:
       name: Telegram channel
@@ -126,9 +126,9 @@ forums_enabled: true
 forums:
   - anabolicshops:
       name: AnabolicShops
-      href: https://co.anabolicshops.me/threads/12126/page-999999999
+      href: https://cp.anabolicshops.me/threads/12126/page-999999999
       icon: images/forums/anabolicshops.png
   - do4a:
       name: Do4a
-      href: https://bg.do4a.me/threads/synergenex-—-откройте-нового-себя.35185/page-999999999
+      href: https://bh.do4a.me/threads/synergenex-—-откройте-нового-себя.35185/page-999999999
       icon: images/forums/do4a.png
